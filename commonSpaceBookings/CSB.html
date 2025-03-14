@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Ease - Common Space Bookings</title>
+    <link rel="stylesheet" href="CSB.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="../imgs/URBAN EASE.png" alt="Urban Ease" class="building-icon">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-item">Dashboard</a></li>
+                <li><a href="#" class="nav-item">Resident Management</a></li>
+                <li class="active"><a href="#" class="nav-item">Common space bookings</a></li>
+                <li><a href="#" class="nav-item">Payments</a></li>
+                <li><a href="#" class="nav-item">Settings</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <h1>Common Space bookings</h1>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3>Today's Bookings</h3>
+                    <span class="stat-number" style="color: #1a365d;">20</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Pending Approvals</h3>
+                    <span class="stat-number" style="color: #e53e3e;">3</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Approved</h3>
+                    <span class="stat-number" style="color: #38a169;">13</span>
+                </div>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="Search by space, date or status...">
+                <button class="approve-all">Approve all</button>
+            </div>
+
+            <div class="bookings-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Visitor</th>
+                            <th>Space</th>
+                            <th>Date & Time</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bookingsTableBody">
+                        <!-- Table content will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="calendar">
+                <div class="calendar-header">
+                    <button id="prevMonth">&lt;</button>
+                    <h2 id="currentMonth">March 2025</h2>
+                    <button id="nextMonth">&gt;</button>
+                </div>
+                <div class="calendar-grid">
+                    <div class="weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tues</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div id="calendarDays" class="days">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="CSB.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Management</title>
+    <link rel="stylesheet" href="Payments.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="../imgs/URBAN EASE.png" alt="Urban Ease" class="building-icon">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-item">Dashboard</a></li>
+                <li><a href="#" class="nav-item">Resident Management</a></li>
+                <li><a href="#" class="nav-item">Common space bookings</a></li>
+                <li class="active"><a href="#" class="nav-item">Payments</a></li>
+                <li><a href="#" class="nav-item">Settings</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <h1>Visitor Management</h1>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <p class="stat-label">Total payments (this month)</p>
+                    <h2 class="stat-value blue"><img src="../imgs/rupee.png" alt="rupees" height="25px" width="18px"
+                            style="margin-right: 5px;">2000000</h2>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-label">Pending payments</p>
+                    <h2 class="stat-value warning"><img src="../imgs/rupee-orange.png" alt="rupees" height="25px"
+                            width="18px" style="margin-right: 5px;">300000</h2>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-label">Late payments</p>
+                    <h2 class="stat-value danger">13</h2>
+                </div>
+            </div>
+
+
+            <div class="actions">
+                <button class="btn primary" id="addPayment">Add payment</button>
+                <button class="btn secondary">Payment settings</button>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by name, date or status...">
+                <select id="timeFilter">
+                    <option value="this-month">This Month</option>
+                    <option value="last-month">Last Month</option>
+                    <option value="all">All Time</option>
+                </select>
+            </div>
+
+            <div class="table-container">
+                <table id="visitorTable">
+                    <thead>
+                        <tr>
+                            <th>Visitor</th>
+                            <th>Purpose</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="visitorTableBody"></tbody>
+                </table>
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+            </div>
+        </main>
+    </div>
+    <script src="Payments.js"></script>
+</body>
+
+</html>

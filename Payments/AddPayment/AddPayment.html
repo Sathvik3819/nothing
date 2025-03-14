@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urban Ease - Visitor Management</title>
+    <link rel="stylesheet" href="AddPayment.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="/imgs/Logo.png" alt="Urban Ease" class="building-icon">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-item">Dashboard</a></li>
+                <li><a href="#" class="nav-item">Resident Management</a></li>
+                <li><a href="#" class="nav-item">Common space bookings</a></li>
+                <li class="active"><a href="#" class="nav-item">Payments</a></li>
+                <li><a href="#" class="nav-item">Settings</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <h1>Visitor Management</h1>
+
+            <div class="form-container">
+                <form id="visitorForm">
+                    <div class="form-section">
+                        <h2>Resident Information</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="residentName">Resident name:</label>
+                                <input type="text" id="residentName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="flatNo">Flat no:</label>
+                                <input type="text" id="flatNo" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Payment Details</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="amount">Amount:</label>
+                                <input type="text" id="amount" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="paymentDate">Payment Date:</label>
+                                <input type="date" id="paymentDate" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="paymentMode">Payment mode:</label>
+                                <select id="paymentMode" required>
+                                    <option value="cash">Cash</option>
+                                    <option value="card">Card</option>
+                                    <option value="upi">UPI</option>
+                                    <option value="netbanking">Net Banking</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="paymentStatus">Payment status:</label>
+                                <input type="text" id="paymentStatus" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="form-group">
+                            <label for="notes">Notes</label>
+                            <textarea id="notes" rows="4"
+                                placeholder="Add any additional information about this payment"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-cancel" onclick="cancelForm()">Cancel</button>
+                        <button type="submit" class="btn btn-save">Save</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="AddPayment.js"></script>
+</body>
+
+</html>

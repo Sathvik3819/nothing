@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Ease - Payment Settings</title>
+    <link rel="stylesheet" href="PaymentSettings.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">
+                <img src="/imgs/Logo.png" alt="Urban Ease" class="building-icon">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-item">Dashboard</a></li>
+                <li><a href="#" class="nav-item">Resident Management</a></li>
+                <li><a href="#" class="nav-item">Common space bookings</a></li>
+                <li class="active"><a href="#" class="nav-item">Payments</a></li>
+                <li><a href="#" class="nav-item">Settings</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h2>Payments</h2>
+
+            <form id="paymentSettingsForm">
+                <div class="card">
+                    <h3>Payment schedule</h3>
+                    <div class="form-group">
+                        <div class="d1">
+                            <label>Payment due date (every month)</label>
+                            <select name="paymentDate" id="paymentDate">
+                                <option value="1">1st</option>
+                                <option value="5" selected>5th</option>
+                                <option value="10">10th</option>
+                                <option value="15">15th</option>
+                            </select>
+                        </div>
+
+                        <div class="d2">
+                            <label>Payment frequency</label>
+                            <select name="frequency" id="frequency">
+                                <option value="monthly" selected>Monthly</option>
+                                <option value="quarterly">Quarterly</option>
+                                <option value="yearly">Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Late payment penalties</h3>
+                    <div class="form-group">
+                        <div class="d1">
+                            <label>Grace period</label>
+                            <select name="gracePeriod" id="gracePeriod">
+                                <option value="3" selected>3 days</option>
+                                <option value="5">5 days</option>
+                                <option value="7">7 days</option>
+                            </select>
+                        </div>
+
+                        <div class="d2">
+                            <label>Penalty rate</label>
+                            <div class="input-group">
+                                <input type="text" name="penaltyRate" id="penaltyRate" value="5" min="0" max="100">
+                                <span class="suffix">%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Automated notifications</h3>
+                    <div class="form-group">
+                        <div class="d1">
+                            <label>First reminder</label>
+                            <select name="firstReminder" id="firstReminder">
+                                <option value="5" selected>5 days before</option>
+                                <option value="7">7 days before</option>
+                                <option value="10">10 days before</option>
+                            </select>
+                        </div>
+
+                        <div class="d2">
+                            <label>Second reminder</label>
+                            <select name="secondReminder" id="secondReminder">
+                                <option value="1" selected>1 day before</option>
+                                <option value="2">2 days before</option>
+                                <option value="3">3 days before</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="save-btn">Save changes</button>
+            </form>
+        </main>
+    </div>
+    <script src="PaymentSettings.js"></script>
+</body>
+
+</html>
